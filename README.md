@@ -1,26 +1,22 @@
-# Support Ticket Triage AI
+# Ticket Triage AI 🚧
 
-A Python service that uses Claude to triage customer support tickets for a fictional medical device company.
-All data is fictional.
+> **Status:** Work in progress. Currently building Stage 1 (chat loop).
 
-> Work in progress. Currently at **Stage 1: terminal chat loop**.
+An AI agent that triages customer support tickets for a fictional medical device company.
+It reads incoming tickets, classifies and prioritizes them, looks up customer data through
+tool calls, searches a support knowledge base, and drafts replies with citations for a
+human agent to approve.
 
-## Setup
+## Planned features
+- [ ] Chat loop with conversation history and system prompt
+- [ ] `POST /triage` API with validated structured output
+- [ ] Tool calling for account and order lookups
+- [ ] Knowledge base search (RAG) with cited answers
+- [ ] Human approval workflow for drafted replies
+- [ ] Automated evals measuring triage accuracy, latency, and cost
+- [ ] Docker + live deployment
 
-Requires Python 3.11+.
+## Tech stack
+Python · FastAPI · Pydantic · Anthropic Claude API · SQLite · ChromaDB · pytest · Docker
 
-```bash
-python -m venv .venv
-# Windows:      .venv\Scripts\activate
-# macOS/Linux:  source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env   # then put your real ANTHROPIC_API_KEY in .env
-```
-
-## Run the chat loop
-
-```bash
-python chat.py
-```
-
-Type `quit` to exit.
+*All customer data in this project is fictional.*
