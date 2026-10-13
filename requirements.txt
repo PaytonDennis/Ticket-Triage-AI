@@ -1,0 +1,6 @@
+# Stage 1: chat loop
+anthropic==1.13.0
+python-dotenv==1.2.4
+
+# Later stages add their dependencies here as they are built
+# (fastapi, pydantic, chromadb, sentence-transformers, pytest).
